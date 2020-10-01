@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="/js/services.js"></script>
+  <title>Reporte</title>
+</head>
+
+<body>
+  <header class="header">
+    <img class="header__img" src="/img.svg" alt="IAS">
+  </header>
+  <section class="register">
+    <section class="register__container">
+      <h2>Reportar</h2>
+      <form class="register__container--form">
+        <div class="container--form__profiles">
+          <input class="input input-id" type="text" placeholder="Id" id="id-tecnico">
+          <input class="input" type="text" placeholder="Servicio" id="service">
+        </div>
+        <div class="container--form__service">
+          <label for="amount-services">Servicios realizados en el día</label>
+          <input class="input" type="number" id="amount-services" onchange="amountServices(this)">
+        </div>
+        <div class="container--form__date">
+          <input class="input" type="date" id="date" required />
+        </div>
+        <div class="container--form__time">
+          <!-- <input class="input" type="time" id="time-start">
+          <input class="input" type="time" id="time-end"> -->
+        </div>
+        <button class="button" onclick="addServices(this)">Agregar</button>
+      </form>
+    </section>
+  </section>
+  <footer class="footer">
+    <a href="/">Terminos de uso</a>
+    <a href="/">Declaración de privacidad</a>
+    <a href="/">Centro de ayuda</a>
+  </footer>
+</body>
+
+</html>
